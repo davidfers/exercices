@@ -41,7 +41,7 @@ export function countDown(taskDate, display) {
     hours = hours < 10 ? `0${hours}` : hours;
     days = days < 10 ? `0${days}` : days;
 
-    display.innerHTML = `${days} dias<br>${hours} horas<br>${minutes} min<br>${seconds} sec`;
+    display.innerHTML = `${days} días<br>${hours} horas<br>${minutes} min<br>${seconds} sec`;
 
     if (timer < 0) {
       const options = {
