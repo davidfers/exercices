@@ -4,6 +4,9 @@ body{
     margin: auto;
     background-color: rgb(236, 227, 236);
 }
+
+/* Form */
+
 input[type="text"]{
     display: block;
     width: 100%;
@@ -21,15 +24,19 @@ input[type="date"], input[type="submit"]{
     font-size: 35px;
   
   }
+  .flex-container{
+    display: flex;
+    justify-content: space-between;
+  }
+
   
-  /* Hide the browser's default radio button */
+  /* Custom radio buttons */
+
   .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
   }
-  
-  /* Create a custom radio button */
   .checkmark {
     border: 2px solid rgba(255, 255, 255, 0);
     position: absolute;
@@ -47,25 +54,59 @@ input[type="date"], input[type="submit"]{
   .green{
     background-color: green;
   }
-  
-  .task{
-    padding: 20px;
-    color: white;
-    font-weight: bold;
-    border: 2px solid white;
-    
-
-  }
-
-  
-  /* On mouse-over, add a grey background color */
   .container:hover input ~ .checkmark {
     border-color: yellow;
     opacity: 0.6;
   }
-  
-  /* When the radio button is checked, add a blue background */
+
   .container input:checked ~ .checkmark {
     border-color: rgb(88, 22, 22);
   }
+
+  /* Error message */
+
+  .error{
+    color:red;
+    text-align: center;
+    margin: 30px 0 30px;
+  }
+
+  /* Tasks */
+
+  .task:first-of-type{
+    margin-top: 40px;
+  }
+  .task{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid white;
+  }
+
+  .task p{
+    display: flex;
+    align-self: center;
+    max-width: 60%;
+  }
+
+  .rightDiv{
+    display: flex;
+  }
+  .task span{
+    display: flex;
+    
+  }
+  .task span:nth-child(1){
+    align-self: center;
+  }
   
+  .close{
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    
+  }

@@ -8,26 +8,30 @@
 </head>
 <body>
     <h1>Prática 1 - Todo List</h1>
-    <form action="">
+    <form >
         <input type="text" name="task" id="task" placeholder="type a task">
-        <label class="container">
-            <input type="radio" name="color" id="red" value="red">
-            <span class="checkmark red"></span>
-        </label>
-        <label class="container">
-            <input type="radio" name="color" id="orange" value="orange">
-            <span class="checkmark orange"></span>
-        </label>
-        <label class="container">
-            <input type="radio" name="color" id="green" value="green">
-            <span class="checkmark green"></span>
-        </label>
-        <input type="date" name="date" id="date">
-        <input type="submit" value="submit">
+        <div class="flex-container">
+            <div class="flex-item">
+                <label class="container">
+                    <input type="radio" name="color" id="red" value="red">
+                    <span class="checkmark red"></span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="color" id="orange" value="orange">
+                    <span class="checkmark orange"></span>
+                </label>
+                <label class="container">
+                    <input type="radio" name="color" id="green" value="green">
+                    <span class="checkmark green"></span>
+                </label>
+            </div>
+            <div class="flex-item">
+                <input type="date" name="date" id="date">
+                <input type="submit" value="submit">
+            </div>
+        </div>
     </form>
-    <div id="task"></div>
-
-
-    <script src="js/script.js"></script>
+    <div class="error" id="error"></div>
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>
